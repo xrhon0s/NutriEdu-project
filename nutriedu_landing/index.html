@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoCulinario | NutriEdu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="AutoCulinario inicio">
+        <span class="brand-mark">A</span>
+        <span>AutoCulinario</span>
+      </a>
+      <nav aria-label="Principal">
+        <a href="#problema">Problema</a>
+        <a href="#solucion">Solución</a>
+        <a href="#plan">Plan</a>
+        <a href="#inversion">Inversión</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-art" aria-hidden="true">
+          <div class="counter">
+            <div class="pan">
+              <span class="pan-handle"></span>
+              <span class="steam steam-a"></span>
+              <span class="steam steam-b"></span>
+              <span class="steam steam-c"></span>
+            </div>
+            <div class="ingredient ingredient-one">Arroz</div>
+            <div class="ingredient ingredient-two">Pollo</div>
+            <div class="ingredient ingredient-three">Vegetales</div>
+            <div class="phone-preview">
+              <span></span>
+              <strong>Receta lógica</strong>
+              <small>12 min · bajo costo</small>
+            </div>
+          </div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">RFP académico · Formulación y Evaluación de Proyectos 2026-01</p>
+          <h1>AutoCulinario convierte ingredientes sueltos en decisiones de cocina.</h1>
+          <p class="lead">
+            Una plataforma web para estudiantes universitarios independientes que necesitan comer mejor,
+            gastar menos y cocinar con una lógica simple: diagnosticar, clasificar y preparar.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#demo">Probar el flujo</a>
+            <a class="button secondary" href="#inversion">Ver inversión</a>
+          </div>
+          <dl class="hero-stats">
+            <div>
+              <dt>30</dt>
+              <dd>encuestas</dd>
+            </div>
+            <div>
+              <dt>6</dt>
+              <dd>entrevistas</dd>
+            </div>
+            <div>
+              <dt>6 meses</dt>
+              <dd>para el MPV</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="problema" class="section problem-band">
+        <div class="section-heading">
+          <p class="eyebrow">Declaración del problema</p>
+          <h2>La barrera no es solo tener comida. Es saber qué hacer con ella.</h2>
+        </div>
+        <div class="problem-grid">
+          <article>
+            <span class="icon">₱</span>
+            <h3>Economía</h3>
+            <p>El delivery y la comida ultraprocesada consumen una parte excesiva del presupuesto mensual.</p>
+          </article>
+          <article>
+            <span class="icon">+</span>
+            <h3>Salud</h3>
+            <p>Las decisiones rápidas suelen llevar a opciones poco nutritivas y difíciles de sostener.</p>
+          </article>
+          <article>
+            <span class="icon">↗</span>
+            <h3>Autonomía</h3>
+            <p>La falta de habilidades culinarias genera frustración y sensación de poco control en casa.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="solucion" class="section solution-layout">
+        <div class="section-heading">
+          <p class="eyebrow">Solución propuesta</p>
+          <h2>Una metodología de componentes, no otra lista infinita de recetas.</h2>
+        </div>
+        <div class="steps">
+          <article>
+            <span>01</span>
+            <h3>Diagnóstico</h3>
+            <p>El usuario registra los ingredientes disponibles y sus restricciones médicas o alimentarias.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Lógica de selección</h3>
+            <p>El sistema clasifica entradas en proteína, carbohidrato y vegetales para crear combinaciones.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Procesamiento</h3>
+            <p>La app propone técnicas simples como hervir, saltear o ensamblar, con bajo costo cognitivo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="demo" class="section demo-band">
+        <div class="demo-copy">
+          <p class="eyebrow">Flujo ilustrado</p>
+          <h2>Selecciona ingredientes y mira cómo se arma una recomendación.</h2>
+          <p>
+            Este prototipo resume la idea central del RFP: pasar de “no sé cocinar” a un algoritmo visible
+            para decidir qué preparar.
+          </p>
+        </div>
+        <div class="demo-panel">
+          <div class="ingredient-picker" aria-label="Selector de ingredientes">
+            <button data-type="protein">Pollo</button>
+            <button data-type="carb">Arroz</button>
+            <button data-type="vegetable">Zanahoria</button>
+            <button data-type="vegetable">Espinaca</button>
+            <button data-type="protein">Huevo</button>
+            <button data-type="carb">Pasta</button>
+          </div>
+          <div class="recipe-output" aria-live="polite">
+            <p class="output-label">Recomendación</p>
+            <h3 id="recipeTitle">Bowl universitario inteligente</h3>
+            <p id="recipeBody">
+              Elige una proteína, un carbohidrato y un vegetal para completar el patrón base.
+            </p>
+            <div class="recipe-tags">
+              <span id="proteinTag">Proteína pendiente</span>
+              <span id="carbTag">Carbohidrato pendiente</span>
+              <span id="vegTag">Vegetal pendiente</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section architecture">
+        <div class="section-heading">
+          <p class="eyebrow">Arquitectura del sistema</p>
+          <h2>Un MPV web con perfil clínico, filtrado inteligente y visualización de recetas.</h2>
+        </div>
+        <div class="architecture-flow" aria-label="Arquitectura cliente servidor">
+          <div>
+            <strong>Frontend</strong>
+            <span>React / HTML · CSS · JS</span>
+          </div>
+          <div>
+            <strong>API REST</strong>
+            <span>Node.js · Express · autenticación</span>
+          </div>
+          <div>
+            <strong>Base de datos</strong>
+            <span>MySQL · perfiles · restricciones</span>
+          </div>
+          <div>
+            <strong>Algoritmo</strong>
+            <span>Filtrado por ingredientes y condiciones médicas</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section strategy-band">
+        <div class="strategy-grid">
+          <div>
+            <p class="eyebrow">PESTEL</p>
+            <h2>El contexto favorece alternativas de alimentación económica y saludable.</h2>
+          </div>
+          <div class="pestel-list">
+            <article><strong>Político</strong><span>Programas de seguridad alimentaria y vida saludable.</span></article>
+            <article><strong>Económico</strong><span>Inflación de alimentos y menor presupuesto para ocio.</span></article>
+            <article><strong>Social</strong><span>Vida independiente temprana y cocina como autocuidado.</span></article>
+            <article><strong>Tecnológico</strong><span>Adopción de micro-learning y herramientas web.</span></article>
+            <article><strong>Ecológico</strong><span>Menos desperdicio mediante compras y sobras optimizadas.</span></article>
+            <article><strong>Legal</strong><span>Protección de datos y manejo responsable de perfiles clínicos.</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section risks">
+        <div class="section-heading">
+          <p class="eyebrow">Matriz de riesgos</p>
+          <h2>Cuatro frentes para cuidar antes del lanzamiento.</h2>
+        </div>
+        <div class="risk-matrix" aria-label="Matriz de riesgos por probabilidad e impacto">
+          <article class="risk high">
+            <span>Alto impacto</span>
+            <h3>Privacidad clínica</h3>
+            <p>Mitigar con consentimiento, mínimos datos y cumplimiento de Ley 1581 de 2012.</p>
+          </article>
+          <article class="risk medium">
+            <span>Alta probabilidad</span>
+            <h3>Abandono por fricción</h3>
+            <p>Reducir pasos de registro y diseñar una primera recomendación rápida.</p>
+          </article>
+          <article class="risk medium">
+            <span>Impacto medio</span>
+            <h3>Errores de filtrado</h3>
+            <p>Probar reglas de alergias, celiaquía y diabetes antes de abrir el MPV.</p>
+          </article>
+          <article class="risk low">
+            <span>Controlable</span>
+            <h3>Desfase de cronograma</h3>
+            <p>Priorizar backend, frontend e integración como núcleo funcional.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="plan" class="section timeline-band">
+        <div class="section-heading">
+          <p class="eyebrow">Cronograma del proyecto</p>
+          <h2>Seis meses para pasar de alcance a MPV publicado.</h2>
+        </div>
+        <div class="timeline">
+          <article><span>Mes 1</span><strong>Inicio y planificación</strong><p>Alcance, equipo y herramientas.</p></article>
+          <article><span>Mes 2</span><strong>Diseño del sistema</strong><p>Arquitectura, MySQL y prototipo UI/UX.</p></article>
+          <article><span>Mes 3</span><strong>Backend</strong><p>API REST, autenticación y lógica de filtrado.</p></article>
+          <article><span>Mes 4</span><strong>Frontend</strong><p>Interfaz web, perfil médico y recetas.</p></article>
+          <article><span>Mes 5</span><strong>Integración y QA</strong><p>Pruebas end-to-end, unitarias y de usuario.</p></article>
+          <article><span>Mes 6</span><strong>Despliegue</strong><p>Publicación del MPV y documentación final.</p></article>
+        </div>
+      </section>
+
+      <section id="inversion" class="section investment">
+        <div class="investment-copy">
+          <p class="eyebrow">Plan de inversión</p>
+          <h2>COP $20.000.000 enfocados en construir el núcleo funcional.</h2>
+          <p>
+            Backend y frontend representan el 40% del presupuesto, alineados con la prioridad técnica del MPV.
+          </p>
+        </div>
+        <div class="budget-chart" aria-label="Distribución de inversión">
+          <div style="--value: 22.5"><span>Backend</span><strong>22,5%</strong></div>
+          <div style="--value: 17.5"><span>Frontend</span><strong>17,5%</strong></div>
+          <div style="--value: 16"><span>Cloud</span><strong>16%</strong></div>
+          <div style="--value: 14"><span>UI/UX</span><strong>14%</strong></div>
+          <div style="--value: 9"><span>Marketing</span><strong>9%</strong></div>
+          <div style="--value: 7.5"><span>Licencias</span><strong>7,5%</strong></div>
+          <div style="--value: 7.5"><span>Contingencia</span><strong>7,5%</strong></div>
+          <div style="--value: 6"><span>QA</span><strong>6%</strong></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <strong>AutoCulinario · NutriEdu</strong>
+      <span>Basado en el RFP académico de mayo de 2026.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

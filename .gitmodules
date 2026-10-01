@@ -1,0 +1,9 @@
+[submodule "nutriedu-backend"]
+	path = nutriedu-backend
+	url = https://github.com/xrhon0s/NutriEdu.git
+[submodule "nutriedu-frontend"]
+	path = nutriedu-frontend
+	url = https://github.com/xrhon0s/NutriEdu-frontend.git
+[submodule "nutriedu-mobile"]
+	path = nutriedu-mobile
+	url = https://github.com/xrhon0s/NutriEdu-mobile.git
