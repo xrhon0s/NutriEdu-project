@@ -1701,15 +1701,11 @@ Avance actualizado:
 - GitHub contracts, frontend quality y Vercel preview: aprobados.
 - Admin Fase 1: **100% implementado y verificado en PR**, pendiente merge y despliegue productivo.
 
-### 2026-09-04 - Guía integral para exposición técnica
+### 2026-09-04 - Revisión integral de documentación técnica
 
-- Se creó `docs/guia_estudio_exposicion_tecnica.md` como documento único de estudio y defensa del proyecto.
-- Incluye problema, propuesta, arquitectura, composición del workspace, web, mobile, backend, API, modelo relacional, migraciones, motor de reglas, IA, notificaciones, correo, seguridad, despliegue y pruebas.
-- Diferencia explícitamente funciones implementadas, limitaciones actuales y roadmap para evitar afirmaciones incorrectas durante la exposición.
-- Incluye diagramas Mermaid de arquitectura y relaciones, guion de 10 minutos, demostración sugerida, preguntas probables, conceptos clave y checklist previo.
-- Se vinculó desde el README general y se corrigieron referencias obsoletas sobre panel administrativo, migraciones y pruebas.
-- Validación: 656 líneas, siete enlaces locales resueltos y `git diff --check` correcto.
-- Estado de publicación: documento disponible localmente; la documentación raíz todavía no se ha publicado en un remoto dedicado.
+- Se revisaron problema, propuesta, arquitectura, composición del workspace, web, mobile, backend, API, modelo relacional, migraciones, motor de reglas, IA, notificaciones, correo, seguridad, despliegue y pruebas.
+- Se diferenciaron funciones implementadas, limitaciones actuales y roadmap para mantener afirmaciones verificables.
+- Se corrigieron referencias obsoletas sobre panel administrativo, migraciones y pruebas.
 
 ### 2026-09-04 - Admin Fase 2: reglas, restricciones y uso de IA
 
@@ -2394,3 +2390,28 @@ Avance actualizado:
 - Mobile aprobó 21 pruebas, TypeScript y Expo lint; su historial se normalizó en `main` y se publicó hasta `6638ffd` en el nuevo repositorio `xrhon0s/NutriEdu-mobile`.
 - La raíz se publica como `xrhon0s/NutriEdu-project`, separada del backend, con documentación, manuales, esquemas, landing y los tres productos enlazados como submódulos.
 - Los `.env`, `.codegraph`, dependencias, builds y respaldos locales permanecen excluidos; `.DS_Store` se retira del índice.
+
+### 2026-10-08 - Patrones del motor de recomendaciones
+
+- Se delimitó el motor de evaluación y recomendación personalizada de recetas como módulo independiente.
+- La evaluación monolítica se reorganizó mediante Chain of Responsibility con manejadores de reglas, metas, calidad, tiempo de preparación y confianza.
+- Strategy encapsula políticas para ganancia muscular, pérdida de grasa, control cardiometabólico y equilibrio general.
+- Factory Method separa el creador base de la construcción concreta de estrategias; Facade coordina contexto, elegibilidad, evaluación, ranking y paginación.
+- El contrato HTTP se conserva y ahora declara la estrategia seleccionada para mejorar trazabilidad.
+- `npm run test:recommendations` verifica resultados clínico-nutricionales y la participación de los cuatro patrones.
+- Se agregó un smoke test autenticado y autolimpiable que recorre API, PostgreSQL y motor sin depender de una cuenta personal.
+- Verificación local completa: los 25 contratos backend pasan; el smoke autenticado confirmó login, perfil, objetivo, metas, 50 recetas elegibles, estrategia `gain_muscle`, orden determinista y respuesta explicable.
+- Frontend: ESLint y build de producción correctos; Vite responde `200` en `http://localhost:5173` y los logs del backend registraron recomendaciones autenticadas con `200/304` sin errores `500`.
+
+### 2026-10-09 - Higiene del repositorio público y pruebas estándar
+
+- Los materiales personales, académicos y de estudio se movieron a `private-docs/`, carpeta local ignorada por Git.
+- El README y la bitácora pública dejaron de enlazar guías personales; la documentación técnica del producto permanece pública.
+- `CONTRIBUTING.md` define límites, privacidad, política documental, verificación y criterios de revisión para los cuatro repositorios.
+- El comando estándar `npm test` del backend ejecuta los contratos y el workflow de GitHub Actions usa el mismo punto de entrada.
+
+### 2026-10-09 - Guía temporal para la actividad de patrones
+
+- Se publicó temporalmente `docs/guia_temporal_actividad_patrones.md` para localizar, explicar y probar Facade, Factory Method, Strategy y Chain of Responsibility en el motor real.
+- La guía incluye el recorrido HTTP, comandos de contratos y smoke test, comprobación desde DevTools, resultados esperados y límites de la demostración.
+- El documento no contiene datos personales ni secretos y deja indicado cómo retirarlo del repositorio después de la evaluación.

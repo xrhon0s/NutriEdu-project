@@ -1,6 +1,9 @@
 .DS_Store
 .codegraph/
 nutriedu-backend-backup/
+private-docs/
+*.private.md
+*.study.md
 
 # Local secrets and generated dependencies remain inside each subproject.
 .env

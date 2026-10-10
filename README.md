@@ -8,8 +8,8 @@ La expansion actual agrega una aplicacion movil, perfil clinico confirmado por e
 
 ## Documentacion
 
+- [Guía temporal de la actividad de patrones](docs/guia_temporal_actividad_patrones.md): recorrido del código, explicación de los patrones y pruebas para la sustentación; retirar después de la evaluación.
 - [Roadmap UI/UX web](docs/roadmap_ui_ux_web.md): fases, criterios de salida y orden de mejora de la experiencia web antes de retomar mobile.
-- [Guía de estudio y exposición técnica](docs/guia_estudio_exposicion_tecnica.md): documento integral para comprender, presentar y defender la arquitectura, base de datos, seguridad, IA, despliegue y estado real del proyecto.
 - [Motor de recomendaciones](docs/motor_recomendaciones.md): precedencia, puntuación, confianza y límites clínicos del ranking.
 - [Plantilla del catálogo de recetas](docs/plantilla_catalogo_recetas.md): formato CSV/JSON para preparar recetas, ingredientes, cantidades y procedencia nutricional.
 - [Backend](nutriedu-backend/README.md): API REST, variables de entorno, endpoints y servicios.
@@ -19,6 +19,7 @@ La expansion actual agrega una aplicacion movil, perfil clinico confirmado por e
 - [Base de datos](docs/bases_de_datos.md): entidades, relaciones y tablas de soporte.
 - [Roadmap clinico, IA y mobile](docs/roadmap_clinico_ai_mobile.md): expansion del producto hacia perfiles avanzados, reglas nutricionales, app movil e IA.
 - [Progreso de expansion clinica y mobile](docs/progreso_expansion_clinica_mobile.md): bitacora viva de decisiones, movimientos y estado del proceso.
+- [Guía de contribución](CONTRIBUTING.md): límites de repositorios, política de documentación pública, privacidad y comandos de calidad.
 
 ## Estructura
 
