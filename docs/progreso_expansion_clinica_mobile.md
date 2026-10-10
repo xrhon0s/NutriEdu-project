@@ -2415,3 +2415,10 @@ Avance actualizado:
 - Se publicó temporalmente `docs/guia_temporal_actividad_patrones.md` para localizar, explicar y probar Facade, Factory Method, Strategy y Chain of Responsibility en el motor real.
 - La guía incluye el recorrido HTTP, comandos de contratos y smoke test, comprobación desde DevTools, resultados esperados y límites de la demostración.
 - El documento no contiene datos personales ni secretos y deja indicado cómo retirarlo del repositorio después de la evaluación.
+
+### 2026-10-10 - Preparación reproducible del smoke test de patrones
+
+- Se confirmó que `test:recommendations-smoke` necesita PostgreSQL y el backend local activos simultáneamente.
+- El script ahora diferencia una conexión fallida a PostgreSQL de una API apagada y muestra instrucciones accionables para cada caso.
+- La guía temporal documenta el uso de dos terminales, los resultados esperados y los errores frecuentes.
+- Verificación local: login temporal, persistencia de perfil, objetivo y metas, 6 recomendaciones de 50 elegibles, estrategia `gain_muscle`, orden determinista y respuesta explicable.

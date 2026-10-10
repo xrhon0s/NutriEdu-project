@@ -531,7 +531,15 @@ npm run test:recommendations
 
 ## 12. Prueba completa de integración
 
-Con el backend encendido:
+Este test necesita PostgreSQL y la API local al mismo tiempo. Utiliza dos terminales abiertas en `nutriedu-backend/`.
+
+Terminal 1, mantener en ejecución:
+
+```bash
+npm run dev
+```
+
+Espera hasta ver `Servidor corriendo en puerto ...`. Después, en la terminal 2:
 
 ```bash
 npm run test:recommendations-smoke
@@ -548,6 +556,13 @@ Este comando:
 7. elimina el usuario temporal.
 
 Durante la sustentación basta con ejecutar la prueba contractual. Conserva el smoke test como evidencia adicional o alternativa.
+
+### Errores frecuentes
+
+- `No se pudo conectar con PostgreSQL`: inicia PostgreSQL y revisa `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER` y `DB_PASSWORD`, o `DATABASE_URL`.
+- `No se pudo conectar con la API`: deja `npm run dev` activo en la primera terminal y confirma que `PORT` coincide.
+- Respuesta HTTP `500`: revisa la terminal del backend; allí aparece el error interno y su `requestId`.
+- No ejecutes el smoke test contra producción salvo que también hayas configurado deliberadamente una base de pruebas correspondiente. El script inserta y elimina un usuario temporal.
 
 ---
 
